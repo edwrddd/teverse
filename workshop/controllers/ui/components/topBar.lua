@@ -22,6 +22,11 @@ local tabs = {
       {"History", "fa:s-history", function ()
         shared.windows.history.visible = not shared.windows.history.visible
       end},
+      {"Assets", "fa:s-block", function()
+         shared.windows.assetPrompt.prompt("audio", function(eeee)
+            print(eeee.id)
+         end)
+      end},
       {"Seperator"},
       {"Settings", "fa:s-cog", function ()
         shared.windows.settings.visible = not shared.windows.settings.visible
